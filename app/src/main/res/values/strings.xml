@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TestGif</string>
+    <string name="btnStart">start</string>
 </resources>
