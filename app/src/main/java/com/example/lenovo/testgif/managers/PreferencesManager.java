@@ -48,7 +48,8 @@ public class PreferencesManager {
     }
 
     public Uri LoadUserPhoto (){
-        return Uri.parse( mSharedPreferences.getString(ConstantManager.USER_PHOTO_KEY,"null"));
-
+        String tempUri = mSharedPreferences.getString(ConstantManager.USER_PHOTO_KEY,
+                "android.resource://com.example.lenovo.testgif/drawable/photouser");
+        return Uri.parse(tempUri);
     }
 }
