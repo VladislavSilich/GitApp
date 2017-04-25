@@ -1,4 +1,4 @@
-package com.example.lenovo.testgif;
+package com.example.lenovo.testgif.activities;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -26,6 +26,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.example.lenovo.testgif.R;
 import com.example.lenovo.testgif.managers.DataManager;
 import com.example.lenovo.testgif.utils.ConstantManager;
 import com.squareup.picasso.Picasso;

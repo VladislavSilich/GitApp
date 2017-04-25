@@ -1,4 +1,4 @@
-package com.example.lenovo.testgif;
+package com.example.lenovo.testgif.activities;
 
 import android.app.ProgressDialog;
 import android.graphics.Color;
@@ -6,6 +6,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.example.lenovo.testgif.R;
 
 /**
  * Created by Lenovo on 23.03.2017.

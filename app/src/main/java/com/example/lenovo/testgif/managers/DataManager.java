@@ -7,7 +7,7 @@ package com.example.lenovo.testgif.managers;
 public class DataManager {
     private static DataManager INSTANCE = null;
     private PreferencesManager mPreferencesManager;
-    public DataManager(){
+    private DataManager(){
     this.mPreferencesManager = new PreferencesManager();
     }
 
