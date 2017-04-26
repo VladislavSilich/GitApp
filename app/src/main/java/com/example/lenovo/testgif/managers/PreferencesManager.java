@@ -52,4 +52,22 @@ public class PreferencesManager {
                 "android.resource://com.example.lenovo.testgif/drawable/photouser");
         return Uri.parse(tempUri);
     }
+
+    public void saveAuthToken(String authToken){
+        SharedPreferences.Editor editor = mSharedPreferences.edit();
+        editor.putString(ConstantManager.AUTH_TOKEN_KEY,authToken);
+        editor.apply();
+    }
+    public String getAuthToken(){
+        return mSharedPreferences.getString(ConstantManager.AUTH_TOKEN_KEY,"null");
+    }
+
+    public void saveUserId(String id){
+        SharedPreferences.Editor editor = mSharedPreferences.edit();
+        editor.putString(ConstantManager.USER_ID_KEY,id);
+        editor.apply();
+    }
+    public String getUserId(){
+        return mSharedPreferences.getString(ConstantManager.USER_ID_KEY,"null");
+    }
 }

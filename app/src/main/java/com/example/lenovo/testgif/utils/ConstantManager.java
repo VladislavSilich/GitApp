@@ -16,4 +16,6 @@ public interface ConstantManager {
     int REQUEST_CAMERA_PICTURES = 99;
     int REQUEST_GALLERY_PICTURES = 88;
     String USER_PHOTO_KEY = "USER_PHOTO_KEY" ;
+    String AUTH_TOKEN_KEY = "AUTH_TOKEN_KEY";
+    String USER_ID_KEY = "USER_ID_KEY";
 }
