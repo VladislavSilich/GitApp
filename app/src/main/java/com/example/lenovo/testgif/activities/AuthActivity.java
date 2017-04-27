@@ -11,6 +11,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.lenovo.testgif.R;
+import com.example.lenovo.testgif.managers.DataManager;
+import com.example.lenovo.testgif.network.req.UserLoginReq;
+import com.example.lenovo.testgif.network.res.UserModelRes;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AuthActivity extends BaseActivity implements View.OnClickListener {
 
@@ -18,11 +25,14 @@ public class AuthActivity extends BaseActivity implements View.OnClickListener {
     private TextView mRememberPassport;
     private EditText mLogin,mPassport;
     private CoordinatorLayout mCoordinatorLayout;
+    private DataManager mDatamanager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
+
+        mDatamanager = DataManager.getInstance();
 
         mSignIn = (Button)findViewById(R.id.btn_login);
         mRememberPassport = (TextView)findViewById(R.id.remember_txt);
@@ -59,4 +69,19 @@ public class AuthActivity extends BaseActivity implements View.OnClickListener {
         showSnackBar("Вход");
     }
 
+    public void signIn(){
+        Call<UserModelRes> call = mDatamanager.loginUser(new UserLoginReq("email","password"));
+        call.enqueue(new Callback<UserModelRes>() {
+            @Override
+            public void onResponse(Call<UserModelRes> call, Response<UserModelRes> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<UserModelRes> call, Throwable t) {
+
+            }
+        });
+    }
 }
+
